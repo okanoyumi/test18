@@ -1,0 +1,13 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+  body.main {
+    color: white;
+    padding: 40px; }
+    body.main.section-content1 {
+      background-color: yellow; }
+    body.main.section-content2 {
+      background-color: blue; }
+    body.main.section-content3 {
+      background-color: yellow; }
