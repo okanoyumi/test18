@@ -33,9 +33,11 @@ function news_init() {
 }
 add_action( 'init', 'news_init' );
 
-
 /** Load stylesheet, script */
 function add_files() {
+	wp_deregister_script( 'jquery' );
+	wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js' );
+	wp_enqueue_script( 'fullpage-js', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.js' );
 	wp_enqueue_script( 'mainjs', get_theme_file_uri( '/assets/main.js' ) );
 	wp_enqueue_style( 'maincss', get_stylesheet_uri() );
 }

@@ -1,9 +1,5 @@
-const $ = require('jquery');
-// require('slick-carousel');
-require('jquery-scrollify');
-
-$.scrollify({ section: '.section-content' });
-
-// $(function() {
-//   $('.section-content').scrollify();
-// });
+$(function() {
+    $('#contents').fullpage({
+	sectionsColor: ['#4BBFC3', '#7BAABE', 'whitesmoke'],
+});
+});

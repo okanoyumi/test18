@@ -7,14 +7,14 @@
  **/
 
 ?>
-<div class="main">
-	<section class="section section-blue js-section" data-section-name="section1">
+<div id="contents">
+	<section class="section">
 	<div class="section-content1">
 		<?php get_header(); ?>
 </div>
 </section>
 
-	<section class="section section-red js-section" data-section-name="section2">
+	<section class="section">
 	<div class="section-content2">
 <!-- Default Posts -->
 <?php
@@ -28,8 +28,9 @@ endif;
 </div>
 </section>
 
-	<section class="section section-blue js-section" data-section-name="section3">
+	<section class="section">
 	<div class="section-content3">
+
 <!-- Custom Posts -->
 <?php
 $args = array(
@@ -52,8 +53,9 @@ if ( $the_query->have_posts() ) :
 endwhile;
 endif;
 ?>
-</div>
 </section>
 </div>
+</div>
+
 <?php
 get_footer();
