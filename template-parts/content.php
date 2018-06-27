@@ -21,7 +21,7 @@ if ( is_single() ) {
 	<li><?php echo get_the_date(); ?></li>
 	<li><?php the_category(); ?></li>
 	<li class="post-img"><a href="<?php the_permalink(); ?>">
-		<?php the_post_thumbnail(); ?></li>
+		<?php the_post_thumbnail(); ?></a></li>
 	<li><?php the_content(); ?></li>
 </ul>
 </div>

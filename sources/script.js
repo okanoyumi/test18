@@ -1,5 +1,8 @@
 $(function() {
     $('#contents').fullpage({
-	sectionsColor: ['#4BBFC3', '#7BAABE', 'whitesmoke'],
-});
+    anchors: ['section1', 'section2', 'section3'],
+    menu: '#slide_menu',
+    navigation: true,
+    navigationPosition : 'right',
+    });
 });

@@ -7,15 +7,11 @@
  **/
 
 ?>
-<div id="contents">
-	<section class="section">
-	<div class="section-content1">
-		<?php get_header(); ?>
-</div>
-</section>
 
-	<section class="section">
-	<div class="section-content2">
+<?php get_header(); ?>
+
+
+<section class="section">
 <!-- Default Posts -->
 <?php
 if ( have_posts() ) :
@@ -25,15 +21,12 @@ if ( have_posts() ) :
 	endwhile;
 endif;
 ?>
-</div>
 </section>
 
-	<section class="section">
-	<div class="section-content3">
-
+<section class="section">
 <!-- Custom Posts -->
 <?php
-$args = array(
+$args      = array(
 	'post_type'      => 'news',
 	'posts_per_page' => 2,
 );
@@ -46,16 +39,14 @@ if ( $the_query->have_posts() ) :
 <li><?php echo get_the_date(); ?></li>
 <li><?php the_category(); ?></li>
 <li class="post-img"><a href="<?php the_permalink(); ?>">
-<?php the_post_thumbnail(); ?></li>
+<?php the_post_thumbnail(); ?></a></li>
 <li><?php the_content(); ?></li>
 </ul>
 <?php
 endwhile;
 endif;
 ?>
-</section>
-</div>
-</div>
+
 
 <?php
 get_footer();

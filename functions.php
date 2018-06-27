@@ -17,7 +17,7 @@ function news_init() {
 			'label'         => 'news',
 			'public'        => true,
 			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-field' ),
-			'menu_position' => 3,
+			'menu_position' => 2,
 			'has_archive'   => true,
 			'taxonomies'    => array( 'news' ),
 			'show_in_rest'  => true,

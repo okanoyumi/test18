@@ -1,1 +1,47 @@
 @import 'fullpage';
+@import 'neat/neat';
+
+// color
+$first: #ececeb;
+$second: #f9a828;
+$third: #07617d;
+
+$base-grid: (
+    columns: 12,
+    gutter: 20px,
+)
+
+section {
+    margin: 0;
+    text-align: center;
+
+    &:nth-child(1n) {
+        background: $first;
+
+        nav {
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 30%;
+                list-style: none;
+                }
+        }
+
+            }
+
+    &:nth-child(2n) {
+        background: $second;
+            @include grid-container;
+
+            .post-container {
+              @include grid-column(2, $base-grid);
+
+        .post-img img {
+            max-width: 50%;
+            max-height: 50%;
+              }
+            }
+    &:nth-child(3n) {
+        background: $third;
+                }
+            }
